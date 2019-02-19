@@ -1,0 +1,6 @@
+[submodule "traj_ext/object_det/mask_rcnn/Mask_RCNN"]
+	path = traj_ext/object_det/mask_rcnn/Mask_RCNN
+	url = https://github.com/matterport/Mask_RCNN
+[submodule "traj_ext/eval/precision/carla/carla"]
+	path = traj_ext/eval/precision/carla/carla
+	url = https://github.com/carla-simulator/carla

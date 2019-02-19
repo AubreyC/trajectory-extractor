@@ -1,2 +1,19 @@
+# Apple
+.DS_Store
+
 # Ignore build
 build
+
+#Virtual Env
+virtual_env/
+ve_trajectory-generator/
+ve_trajectory-extractor/
+
+# Python
+*.pyc
+**/videos
+**/outputs
+**/output
+
+# Cfg file:
+*.ini
