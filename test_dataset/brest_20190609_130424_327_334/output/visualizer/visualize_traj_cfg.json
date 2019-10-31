@@ -1,0 +1,15 @@
+{
+    "traj": "test_dataset/brest_20190609_130424_327_334/output/vehicles/traj_inspect/csv/brest_20190609_130424_327_334_traj.csv",
+    "traj_person": "test_dataset/brest_20190609_130424_327_334/output/pedestrians/traj_inspect/csv/brest_20190609_130424_327_334_traj.csv",
+    "time": "",
+    "image_dir": "test_dataset/brest_20190609_130424_327_334/img",
+    "camera_street": "test_dataset/brest_20190609_130424_327_334/brest_area1_street_cfg.yml",
+    "camera_sat": "test_dataset/brest_20190609_130424_327_334/brest_area1_sat_cfg.yml",
+    "camera_sat_img": "test_dataset/brest_20190609_130424_327_334/brest_area1_sat.png",
+    "det_zone_fned": "test_dataset/brest_20190609_130424_327_334/brest_area1_detection_zone.yml",
+    "shrink_zone": 1.0,
+    "hd_map": "test_dataset/brest_20190609_130424_327_334/brest_area1_street_hd_map.csv",
+    "no_label": false,
+    "output_dir": "test_dataset/brest_20190609_130424_327_334/output",
+    "export": false
+}

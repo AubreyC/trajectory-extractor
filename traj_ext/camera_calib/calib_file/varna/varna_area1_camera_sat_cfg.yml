@@ -1,0 +1,24 @@
+%YAML:1.0
+---
+rot_CF_F: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 6.1232339957367660e-17, 1., 0., -1., 6.1232339957367660e-17,
+       0., 0., 0., 1. ]
+trans_CF_F: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [ 0., 0., 186. ]
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 1.6758699999999999e+03, 0., 7.6750000000000000e+02, 0.,
+       1.6758699999999999e+03, 438., 0., 0., 1. ]
+dist_coeffs: !!opencv-matrix
+   rows: 4
+   cols: 1
+   dt: d
+   data: [ 0., 0., 0., 0. ]

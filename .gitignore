@@ -1,2 +1,25 @@
+# Apple
+.DS_Store
+
 # Ignore build
 build
+
+#Virtual Env
+virtual_env/
+ve*
+
+# Dataset
+dataset/
+test_output/
+
+# Random
+latex
+
+# Python
+*.pyc
+**/videos
+**/outputs
+*.egg-info
+
+# Cfg file:
+*.ini

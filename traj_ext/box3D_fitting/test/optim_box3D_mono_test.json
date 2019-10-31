@@ -1,0 +1,13 @@
+{
+    "image_dir": "test_dataset/brest_20190609_130424_327_334/img",
+    "det_dir": "test_dataset/brest_20190609_130424_327_334/output/det/csv",
+    "det_zone_fned": "test_dataset/brest_20190609_130424_327_334/output/brest_area1_detection_zone.yml",
+    "type_box3D": "traj_ext/box3D_fitting/test/optim_3Dbox_mono_type_test.csv",
+    "camera_model": "test_dataset/brest_20190609_130424_327_334/brest_area1_street_cfg.yml",
+    "output_dir": "traj_ext/box3D_fitting/test/test_output/box3D",
+    "no_save_csv": false,
+    "no_save_images": false,
+    "show_images": false,
+    "img_scale": 0.2,
+    "frame_limit": 10
+}

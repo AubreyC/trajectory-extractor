@@ -1,0 +1,17 @@
+{
+    "image_dir": "test_dataset/brest_20190609_130424_327_334/img",
+    "det_dir": "test_dataset/brest_20190609_130424_327_334/output/det/csv",
+    "det_zone_im": "test_dataset/brest_20190609_130424_327_334/brest_area1_detection_zone_im.yml",
+    "ignore_detection_area": "test_dataset/brest_20190609_130424_327_334/brest_area1_ignoreareas.csv",
+    "output_dir": "test_dataset/brest_20190609_130424_327_334/output/pedestrians",
+    "no_save_csv": false,
+    "no_save_images": true,
+    "show_images": false,
+    "associate_with_label": false,
+    "threshold_overlap": 0.3,
+    "nb_frame_past": 10,
+    "delete_det_out_det_zone": false,
+    "shrink_zone": 1.0,
+    "mode": "pedestrians",
+    "frame_limit": 0
+}

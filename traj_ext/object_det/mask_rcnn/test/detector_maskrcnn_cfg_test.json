@@ -1,0 +1,14 @@
+{
+    "image_dir": "test_dataset/brest/brest_20190609_130424_327_334/img",
+    "output_dir": "traj_ext/object_det/mask_rcnn/test/test_output/det",
+    "save_csv": true,
+    "save_images": true,
+    "show_images": false,
+    "crop_x1y1x2y2": [
+        200,
+        360,
+        1000,
+        720
+    ],
+    "frame_limit": 3
+}

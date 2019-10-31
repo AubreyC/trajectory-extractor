@@ -1,0 +1,14 @@
+{
+    "image_dir": "test_dataset/brest_20190609_130424_327_334/img",
+    "output_dir": "test_dataset/brest_20190609_130424_327_334/output",
+    "no_save_csv": false,
+    "no_save_images": true,
+    "show_images": false,
+    "crop_x1y1x2y2": [
+        180,
+        120,
+        1250,
+        720
+    ],
+    "frame_limit": 0
+}

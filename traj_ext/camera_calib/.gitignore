@@ -1,0 +1,3 @@
+# Ignore calib csv
+camera_calib_manual_cartesian.csv
+camera_calib_manual_latlon.csv
