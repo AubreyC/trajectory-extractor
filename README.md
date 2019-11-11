@@ -12,7 +12,7 @@ Update submodules:
 
     git submodule update --init --recursive
 
-Setup a virtual environment:
+Setup a virtual environment with **`Python 3`**:
 
     virtualenv -p /usr/bin/python3 ve_trajectory-extractor
     source ve_trajectory-extractor/bin/activate
@@ -20,6 +20,8 @@ Setup a virtual environment:
 Install dependencies:
 
     pip install -e .
+
+**Note:** If `pip install -e .` fails because of `numpy` and `Cython`, you can install them mannually `pip install numpy Cython` before running `pip install -e .`
 
 Download and save `mask_rcnn_coco.h5` weights in `traj_ext/object_det/mask_rcnn/Mask_RCNN/`: https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
 

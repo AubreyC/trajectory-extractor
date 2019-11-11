@@ -6,7 +6,7 @@ build
 
 #Virtual Env
 virtual_env/
-ve*
+ve_*
 
 # Dataset
 dataset/
