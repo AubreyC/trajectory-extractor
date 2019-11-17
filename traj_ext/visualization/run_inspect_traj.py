@@ -399,8 +399,7 @@ def main(args_input):
         help='Path to detection zone ignore');
     argparser.add_argument(
         '-export',
-        type=bool,
-        default = False,
+        action ='store_true',
         help='Export trajectories directly and exit the program (for automated process)');
 
     argparser.add_argument(
@@ -821,6 +820,7 @@ def run_inspect_traj(config):
 
             #Exit the program
             break;
+
         #######################################################
         ## Control keys
         #######################################################

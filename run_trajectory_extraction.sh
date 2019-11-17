@@ -9,14 +9,19 @@ LOCATION_NAME="brest"
 DATE="20190609"
 START_TIME="1310"
 
-DET_ZONE_IM="brest_area1_detection_zone_im.yml"
-DET_ZONE_FNED="brest_area1_detection_zone.yml"
-
 CAMERA_STREET="brest_area1_street_cfg.yml"
 CAMERA_SAT="brest_area1_sat_cfg.yml"
 CAMERA_SAT_IMG="brest_area1_sat.png"
 HD_MAP="brest_area1_street_hd_map.csv"
-IGNORE_AREA="brest_area1_ignoreareas.csv"
+
+# SET DETECTION AD IGNORE ZONES
+DET_ZONE_IM_VEHICLES="brest_area1_detection_zone_im.yml"
+DET_ZONE_FNED_VEHICLES="brest_area1_detection_zone.yml"
+IGNORE_AREA_VEHICLES=""
+
+DET_ZONE_IM_PEDESTRIANS="brest_area1_detection_zone_im.yml"
+DET_ZONE_FNED_PEDESTRIANS="brest_area1_detection_zone.yml"
+IGNORE_AREA_PEDESTRIANS="brest_area1_ignoreareas.csv"
 
 # SET CROP VALUES FOR DETECTION HERE IF NEEDED
 CROP_X1=180
@@ -77,8 +82,8 @@ python traj_ext/det_association/run_det_association.py\
             -image_dir ${IMG_DIR}\
             -output_dir ${OUTPUT_VEHICLES_DIR}\
             -det_dir ${DET_DIR}\
-            -ignore_detection_area ${SOURCE_FOLDER}/${IGNORE_AREA}\
-            -det_zone_im ${SOURCE_FOLDER}/${DET_ZONE_IM}\
+            -ignore_detection_area ${SOURCE_FOLDER}/${IGNORE_AREA_VEHICLES}\
+            -det_zone_im ${SOURCE_FOLDER}/${DET_ZONE_IM_VEHICLES}\
             -mode ${MODE_VEHICLES}\
             -no_save_images
 
@@ -92,12 +97,12 @@ python traj_ext/postprocess_track/run_postprocess.py\
             -camera_street ${SOURCE_FOLDER}/${CAMERA_STREET}\
             -camera_sat  ${SOURCE_FOLDER}/${CAMERA_SAT}\
             -camera_sat_img ${SOURCE_FOLDER}/${CAMERA_SAT_IMG}\
-            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED}\
+            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED_VEHICLES}\
             -delta_ms ${DELTA_MS}\
             -location_name ${LOCATION_NAME}\
             -dynamic_model ${DYNAMIC_MODEL_VEHICLES}\
             -date ${DATE}\
-            -start_time $START_TIME}\
+            -start_time ${START_TIME}\
             -no_save_images
 
 python traj_ext/visualization/run_inspect_traj.py\
@@ -109,7 +114,7 @@ python traj_ext/visualization/run_inspect_traj.py\
             -camera_street ${SOURCE_FOLDER}/${CAMERA_STREET}\
             -camera_sat  ${SOURCE_FOLDER}/${CAMERA_SAT}\
             -camera_sat_img ${SOURCE_FOLDER}/${CAMERA_SAT_IMG}\
-            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED}\
+            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED_VEHICLES}\
             -label_replace ${LABEL_REPLACE_VEHICLES}\
             -output_dir ${OUTPUT_VEHICLES_DIR}\
             -hd_map ${SOURCE_FOLDER}/${HD_MAP}\
@@ -117,7 +122,7 @@ python traj_ext/visualization/run_inspect_traj.py\
             -location_name ${LOCATION_NAME}\
             -date ${DATE}\
             -start_time ${START_TIME}\
-            -export 'true'\
+            -export
 
 
 ###################################################################
@@ -129,8 +134,8 @@ python traj_ext/det_association/run_det_association.py\
             -image_dir ${IMG_DIR}\
             -output_dir ${OUTPUT_PEDESTRIANS_DIR}\
             -det_dir ${DET_DIR}\
-            -ignore_detection_area ${SOURCE_FOLDER}/${IGNORE_AREA}\
-            -det_zone_im ${SOURCE_FOLDER}/${DET_ZONE_IM}\
+            -ignore_detection_area ${SOURCE_FOLDER}/${IGNORE_AREA_PEDESTRIANS}\
+            -det_zone_im ${SOURCE_FOLDER}/${DET_ZONE_IM_PEDESTRIANS}\
             -mode ${MODE_PEDESTRIANS}\
             -no_save_images
 
@@ -144,12 +149,12 @@ python traj_ext/postprocess_track/run_postprocess.py\
             -camera_street ${SOURCE_FOLDER}/${CAMERA_STREET}\
             -camera_sat  ${SOURCE_FOLDER}/${CAMERA_SAT}\
             -camera_sat_img ${SOURCE_FOLDER}/${CAMERA_SAT_IMG}\
-            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED}\
+            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED_PEDESTRIANS}\
             -delta_ms ${DELTA_MS}\
             -location_name ${LOCATION_NAME}\
             -dynamic_model ${DYNAMIC_MODEL_PEDESTRIANS}\
             -date ${DATE}\
-            -start_time $START_TIME}\
+            -start_time ${START_TIME}\
             -no_save_images
 
 python traj_ext/visualization/run_inspect_traj.py\
@@ -161,7 +166,7 @@ python traj_ext/visualization/run_inspect_traj.py\
             -camera_street ${SOURCE_FOLDER}/${CAMERA_STREET}\
             -camera_sat  ${SOURCE_FOLDER}/${CAMERA_SAT}\
             -camera_sat_img ${SOURCE_FOLDER}/${CAMERA_SAT_IMG}\
-            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED}\
+            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED_PEDESTRIANS}\
             -label_replace ${LABEL_REPLACE_PEDESTRIANS}\
             -output_dir ${OUTPUT_PEDESTRIANS_DIR}\
             -hd_map ${SOURCE_FOLDER}/${HD_MAP}\
@@ -169,7 +174,7 @@ python traj_ext/visualization/run_inspect_traj.py\
             -location_name ${LOCATION_NAME}\
             -date ${DATE}\
             -start_time ${START_TIME}\
-            -export 'true'\
+            -export
 
 
 ###################################################################
@@ -183,6 +188,6 @@ python traj_ext/visualization/run_visualizer.py\
             -camera_street ${SOURCE_FOLDER}/${CAMERA_STREET}\
             -camera_sat  ${SOURCE_FOLDER}/${CAMERA_SAT}\
             -camera_sat_img ${SOURCE_FOLDER}/${CAMERA_SAT_IMG}\
-            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED}\
+            -det_zone_fned ${SOURCE_FOLDER}/${DET_ZONE_FNED_VEHICLES}\
             -hd_map ${SOURCE_FOLDER}/${HD_MAP}\
             -output_dir ${OUTPUT_DIR}\

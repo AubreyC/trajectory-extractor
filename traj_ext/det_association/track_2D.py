@@ -162,6 +162,8 @@ class Track2D(object):
 
                 # Get corresponding det object
                 det = DetObject.get_det_from_id(det_list, det_asso.det_id);
+                if det is None:
+                    raise ValueError('[Error]: Detection {} not found in frame:{} det_csv_name:{} det_asso_csv_name:{}'.format(det_asso.det_id, frame_index, det_csv_name, det_asso_csv_name))
 
                 # Only add the detection to the track if the detection is good
                 if det.good:

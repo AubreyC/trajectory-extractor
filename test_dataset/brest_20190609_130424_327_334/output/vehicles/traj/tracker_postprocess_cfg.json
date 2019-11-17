@@ -16,9 +16,9 @@
     "delta_ms": 100,
     "box3D_minimum_overlap": 0.4,
     "projection_mode": "center_2d_height",
-    "delete_incomplete_tracks": 1.0,
+    "incomplete_track_shrink_factor": 1.0,
     "location_name": "brest",
     "date": "20190609",
-    "start_time": "1310}",
+    "start_time": "1310",
     "frame_limit": 0
 }

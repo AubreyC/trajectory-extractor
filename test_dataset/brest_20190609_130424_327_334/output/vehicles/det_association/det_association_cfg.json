@@ -2,7 +2,7 @@
     "image_dir": "test_dataset/brest_20190609_130424_327_334/img",
     "det_dir": "test_dataset/brest_20190609_130424_327_334/output/det/csv",
     "det_zone_im": "test_dataset/brest_20190609_130424_327_334/brest_area1_detection_zone_im.yml",
-    "ignore_detection_area": "test_dataset/brest_20190609_130424_327_334/brest_area1_ignoreareas.csv",
+    "ignore_detection_area": "test_dataset/brest_20190609_130424_327_334/",
     "output_dir": "test_dataset/brest_20190609_130424_327_334/output/vehicles",
     "no_save_csv": false,
     "no_save_images": true,

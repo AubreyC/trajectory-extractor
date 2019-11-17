@@ -145,10 +145,10 @@ def main(args_input):
         default ='center_2d_height',
         help='Projection mode: \'box3D\' or \'center_2d_height\' or \'center_2d\'');
     argparser.add_argument(
-        '-delete_incomplete_tracks',
+        '-incomplete_track_shrink_factor',
         type =float,
         default = 1.0,
-        help='Shrink parameter used to delete \'incomplete\' tracks: starts or ends inside the detection zone if < 1.0');
+        help='If < 1.0: shrink the detection zone and delete \'incomplete\' tracks (starts or ends inside this detection zone shrinked');
 
     argparser.add_argument(
         '-location_name',
@@ -300,7 +300,7 @@ def run_postprocess_tracker(config):
         det_zone_FNED = det_zone.DetZoneFNED.read_from_yml(config.det_zone_fned);
 
     # Det zone clean
-    shrink_factor = config.delete_incomplete_tracks;
+    shrink_factor = config.incomplete_track_shrink_factor;
     det_zone_FNED_clean = None;
     if shrink_factor < 0.99:
         det_zone_FNED_clean = det_zone_FNED.shrink_zone(shrink_factor = shrink_factor)
